@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+/* FONTS */
+.giga {
+	font-family: "Lexend Giga", sans-serif;
+}
+.poppins {
+	font-family: "Poppins", sans-serif;
+}
+
+/* COMPONENTS */
+.blurry_bg {
+	background: hsl(0 0% 0%/0.5);
+	backdrop-filter: blur(2em);
+}
+.header_hover {
+	transition: linear-gradient 0.8s ease-in;
+	border-radius: 34px;
+}
+
+.header_hover:hover {
+	color: white;
+	background: linear-gradient(90deg, #cc0068 0%, #432cd5 100%);
+}
+
+.connect_hero {
+	transition: all 0.3s ease-in-out;
+}
+
+.connect_hero:hover {
+	background: #ffffff;
+	color: black;
+	box-shadow: 0 14px 28px rgba(73, 76, 75, 0.2), 0 10px 10px rgba(0, 0, 0, 0.5),
+		0 0 30px -10px #000000;
+	transform: translateY(-3px);
+}
+
+.landing_conatiner {
+	/* object-fit: cover; */
+	background-image: url("/bg.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.text_gradient {
+	width: 30rem;
+	background-image: linear-gradient(60deg, #cc0068, #432cd5);
+	background-clip: text;
+	color: transparent;
+}
+.hover_effect_footer {
+	transform: translate(0%, 0%);
+	cursor: pointer;
+}
+
+.hover_effect_footer::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+	transition: transform 0.2s ease-in-out;
+	transform: scale(0);
+}
+
+.hover_effect_footer:hover::after {
+	color: white;
+	transform: scale(1);
+}
+.but {
+	background: linear-gradient(89.92deg, #cc0068 0.06%, #432cd5 101.45%);
+}
+
+.but2 {
+	background: linear-gradient(90deg, #432cd5, #cc0068);
+	background-size: 300% 300%;
+	animation: gradient 3s ease-out infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* HAMBURGER MENU */
+#checkbox {
+	display: none;
+}
+
+.toggle {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	transition-duration: 0.5s;
+}
+
+.bars {
+	width: 100%;
+	height: 3px;
+	background-color: white;
+	border-radius: 4px;
+}
+
+#bar2 {
+	transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+	width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+	position: absolute;
+	transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+	transform: scaleX(0);
+	transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+	width: 100%;
+	transform: rotate(45deg);
+	transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+	width: 100%;
+	transform: rotate(-45deg);
+	transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+	transition-duration: 0.5s;
+	transform: rotate(180deg);
+}
+
+.bgsxyt {
+	/* background-size: auto 932px; */
+	background-size: cover;
+}
+
+.body_bg {
+	background-image: url("/approach_bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* .but3:hover {
+	background: linear-gradient(89.92deg, #cc0068 0.06%, #432cd5 101.45%);
+	scale: 1.1;
+	position: relative;
+	box-shadow: 2px 2px 30px rgba(67, 44, 213, 0.7),
+		1px 1px 30px rgba(204, 0, 104, 0.6);
+} */
+.security_bg {
+	background-image: url("/sec2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.actives {
+	background: linear-gradient(89.92deg, #cc0068 0.06%, #432cd5 101.45%);
+	scale: 1.1;
+	position: relative;
+	box-shadow: 2px 2px 30px rgba(67, 44, 213, 0.7),
+		1px 1px 30px rgba(204, 0, 104, 0.6);
+}
+.about1 {
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contact_form_bg {
+	border-radius: 39px;
+	background: linear-gradient(180deg, #ededed 0%, rgba(237, 237, 237, 0) 100%);
+	box-shadow: 1px 1px 33px 0px rgba(0, 0, 0, 0.25);
+}
+.submit_button {
+	border-radius: 41px;
+	background: linear-gradient(89deg, #cc0068 0%, #432cd5 100%);
+	filter: drop-shadow(1px 1px 200px rgba(204, 0, 104, 0.6))
+		drop-shadow(1px 1px 15px rgba(67, 44, 213, 0.7));
+	transition: all 0.3s ease-in-out;
+}
+.submit_button:hover {
+	scale: 1.1;
+}
