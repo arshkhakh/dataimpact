@@ -37,7 +37,7 @@ const Footer = () => {
 						info@datainspect.ca
 					</p>
 					<p className='head2 text-[#A8A8A8] lg:tracking-[-0.5px] mt-[1rem] text-xs md:mt-[0.75rem]'>
-						+1289-217-8843
+						+1 289-217-8843
 					</p>
 					<p className='head2 text-[#A8A8A8] lg:tracking-[-0.5px] mt-[1rem] text-xs md:mt-[0.75rem]'>
 						Toronto, Canada
